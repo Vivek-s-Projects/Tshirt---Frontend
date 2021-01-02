@@ -1,29 +1,19 @@
-import React from 'react'
-import {BrowserRouter,Switch,Route} from 'react-router-dom'
-import Home from './core/Home'
-function Routes() {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route exact path='/'  component={Home} />
-            </Switch>
-        </BrowserRouter>
-    )
-}
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./core/Home";
+import Signup from "./user/Signup";
+import Signin from "./user/Signin";
 
-export default Routes
-// import React from "react";
-// import { BrowserRouter, Switch, Route } from "react-router-dom";
-// import Home from "./core/Home";
+const Routes = () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/signup" exact component={Signup} />
+        <Route path="/signin" exact component={Signin} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
 
-// const Routes = () => {
-//   return (
-//     <BrowserRouter>
-//       <Switch>
-//         <Route path="/" exact component={Home} />
-//       </Switch>
-//     </BrowserRouter>
-//   );
-// };
-
-// export default Routes;
+export default Routes;
